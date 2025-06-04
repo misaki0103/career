@@ -1,144 +1,329 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Career</title>
-  
-  <!-- リセットCSS 読み込み -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
-  <!-- style.css 読み込み -->
-  <link rel="stylesheet" href="style.css">
-  
-  <!-- Google Fonts 読み込み -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #333;line-height: 1.5;
+  background-color: #fffff3;
 
-</head>
-  
-<body>
-  
-  <header>
-    <div class="container">
-        <a href ="./"><span class="color">C</span>areer</a>
-    </div>
-  </header>
-  
-  <main>
-    <section class="section1">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1>あなたのキャリア<br>次の一歩を踏み出そう</h1>
-                    <p>マーケットの最新情報と個別カウンセリングで、未来への道を一緒に考えます。</p>
-                    <a href="./contact">無料相談に申し込む</a>
-                </div>
-                <div class="col">
-                    <img src="../images/img1.png"
-                    width="100%"
-                    alt="Career">
-                </div>
-            </div>
-        </div>
-      </section>
+}
 
-      <section class="section2">
-        <div class="container">
-          <h2>Abou<span>t</span></h2>
-          <p class="heading">私たちについて </p>
-          <p class="text">私たちのビジョンは、すべての人が自分自身のキャリアパスを自由に描ける社会を実現することです。<br>
-        <br>一人ひとりが自分の可能性を最大限に発揮し、充実した職業生活を送ることができるよう、継続的なサポートを提供します。</p>
-        </div>
-      </section>
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
 
-      <section class="section3">
-        <div class="container">
-          <h2>Servic<span>e</span></h2>
-          <p class="heading">事業内容</p>
-          <p>転職を考える全ての人に対して<br>
-          一人ひとりの目標と夢を実現するための専門的な
-        サポートを提供します。</p>
-        <div class="row">
-          <div class="col">
-            <div class="bg">
-              <img src="../images/img2.png"
-              alt="転職支援サービス">
-            </div>
-          <h3>転職支援サービス</h3>
-          <p class="text2">個別のキャリア目標とスキルセットに基づいた求人の紹介、面接対策、
-            入社後のフォローアップを含む全面的なサポートを提供します。</p>
-        </div>
+}
+
+a{transition:  .3s;}
+a:hover {opacity: 0.8;}
+
+header {
+    padding: 19px 0;
+}
+
+header a {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000;
+}
+
+header a .color {
+    color:#f39800}
+
+.section1 .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section1 .col {
+    width: 49%;
+}
+
+.section1 h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 27px;
+}
+
+.section1 p {
+    margin-bottom: 27px;
+}
+
+.section1 a {
+    font-weight: 700;
+    display: inline-block;
+    background-color: #f39800;
+    color: #ffffff;
+    padding: 12px 30px 15px;
+    border-radius: 100px;
+}
+
+@media screen and (max-width: 767px) {
+    .section1 .row {
+        flex-wrap: wrap;
+        gap: 24px;
+        padding-top: 30px;
+    }
+    .section1 .col {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section1 h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .section1 img {
+        width: 60%;
+    }
+}
+
+.section2 {
+    padding: 58px 0 78px;
+
+}
+
+.section2 .container {
+    max-width: 660px;
+    background-color: #fff9ee;
+    border-radius: 20px;
+    padding: 59px 71px 74px;
+}
+
+.section2 h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.section2 h2 span {
+    color: #f39800;
+}
+
+.section2 .heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f39800;
+    margin-bottom: 19px;
+}
+
+.section2 .text {
+    line-height: 1.8;
+}
+
+@media screen and (max-width: 767px) {
+    .section2 .container {
+    padding: 24px;
+}
+}
+
+.section3 {
+    padding: 0 0 140px 0;
+    padding-bottom: 140px;
+
+}
+
+.section3 h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.section3 h2 span {
+    color: #f39800;
+}
+
+.section3 .heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f39800;
+    margin-bottom: 19px;
+}
+
+.section3 .text {
+    line-height: 1.8;
+    margin-bottom:  44px;
+}
+
+.section3 .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section3 .col {
+    width: 32%;
+}
+
+.section3 .bg {
+    text-align: center;
+    background-color: #fff9ee;
+    width: 220px;
+    height: 220px;
+    border-radius: 100%;
+    position: relative;
+    margin: 0 auto 10px;
+
+}
+
+.section3 img {
+    height: 140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.section3 h3 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.section3 .text2 {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+@media screen and (max-width: 767px) {
+    .section3
+    padding: 0 0 90px 0;
+
+.section3 .row {
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.section3 .col {
+    width: 100%;
+    
+}
+.section3 .bg {
+    width: 160px;
+    height: 160px;
+}
+.section3 img {
+    height: 90px;
+
+}
+}
+.section4 {
+    padding: 0 0 124px 0;
+}
+
+.section4 h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.section4 h2 span {
+    color: #f39800;
+}
+
+.section4 .heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f39800;
+    margin-bottom: 19px;
+}
+
+.section4 .text {
+    line-height: 1.8;
+    margin-bottom:  44px;
+}
+
+.section4 .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section4 .col :first-child{
+    width: 40%;
+}
+
+.section4 .col :last-child{
+    width: 49%;
+}
+
+@media screen and (max-width: 767px) {
+    .section4 {
+    padding: 0 0 30px 0;
+    }
+
+    .section4 .row {
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.section4 .col :first-child {
+    width: 100%;    
+}
+.section4 .col :last-child {
+    width: 100%;    
+}
+}
 
 
-        <div class="col">
-            <div class="bg">
-              <img src="../images/img3.png"
-              alt="転職支援サービス">
-            </div>
-          <h3>キャリアコンサルティング</h3>
-          <p class="text2">キャリアの方向性を決定するためのカウンセリングセッション。長期的
-            なキャリアプランの策定やスキルアップのアドバイスを提供します。</p>
-        </div>
+.section5 {
+    text-align: center;
+    margin-bottom: 57px;
+}
 
+.section5 .container {
+    background-color: #f39800;
+    border-radius: 20px;
+    padding: 31px 0 40px;
+}
 
-        <div class="col">
-            <div class="bg">
-              <img src="../images/img4.png"
-              alt="キャリア開発プログラム">
-            </div>
-          <h3>転職支援サービス</h3>
-          <p class="text2">専門の業界知識とスキル開発を組み合わせた
-            カスタマイズプログラムを提供します。</p>
-        </div>
+.section5 h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 22px;
+}
+.section5 img {
+    max-width: 180px;
+    margin-bottom: 27px;
+}
 
+.section5 a {
+    font-weight: 700;
+    display: inline-block;
+    background-color: #ffffff;
+    color: #f39800;
+    padding: 12px 30px 15px;
+    border-radius: 100px;
+}
 
-        </div>
-        </div>
+@media screen and (max-width: 767px) {
+    .section5 {
+        margin-bottom: 30px;
+    }
+    .section5 .container {
+        padding: 24px 0;
+    }
+    .section5 h2 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+    .section5 img {
+        max-width: 130px;
+        margin-bottom: 16px;
+    }
+}
 
+footer {
+    text-align: center;
+    padding: 21px 0 43px;
+    font-size: 13px;
+}
 
-      </section>
+footer .logo {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 14px;
 
-      <section class="section4">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <img src="../images/img5.png"
-              width="100%" alt="">
+}
 
-            </div>
-            <div class="col">
-              <h2>Storie<span>s</span></h2>
-          <p class="heading">事例紹介</p>
-          <p>あなたの未来を変えることができる
-          実際の成功事例<br>私たちのサポートを受け、
-            新しいキャリアの扉を開いた人々の物語です。</p>
-            </div>
-        </div>
-        </div>
-
-
-      </section>
-
-      <section class="section5">
-        <div class="container">
-          <h2>キャリアの可能性、無限大に広げよう</h2>
-          <img src="../images/img6.png" alt="キャリアの可能性、無限大に広げよう">
-          <div>
-            <a href="./contact">無料相談に申し込む</a>
-          </div>
-          
-        </div>
-  </main>
-  
-  <footer>
-    <div class="logo">
-      <span class="color">C</span>areer
-    </div>
-    Copyright © 2024 Career Inc. All rights reserved.
-  </footer>
-  
-</body>
-
-</html>
+footer .logo .color {
+    color: #f39800;
+}
